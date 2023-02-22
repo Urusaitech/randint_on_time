@@ -3,7 +3,7 @@ from time import time
 import tkinter as tk
 from tkinter import ttk
 
-
+# TODO: comments, types
 def time_dependent_rng(start, end):
     # divide by 60 to bound generation to seconds
     timestamp = int(time()) // 60
@@ -12,7 +12,7 @@ def time_dependent_rng(start, end):
     # generate randint in between
     return random.randint(start, end)
 
-
+# TODO: comments
 def main():
     root = tk.Tk()
     main_frame = ttk.Frame(root, padding=10)
@@ -32,7 +32,8 @@ def main():
     result_var = tk.StringVar(main_frame)
     result_label = ttk.Label(main_frame, textvariable=result_var)
     result_label.grid(column=0, row=4, columnspan=3)
-
+    
+    # TODO: comments, types
     def callback():
         start = start_var.get()
         end = end_var.get()
